@@ -1,22 +1,29 @@
 #include <stdio.h>
 #include <float.h>
-void add(int a, int b);
-void sub(int a, int b);
+void add(float a, float b);
+void sub(float a, float b);
+void mult(float a, float b);
 int main() {
     char op;
-    int num1, num2;
-    num1 = 6;
-    num2 = 7;
+    float num1, num2;
+    num1 = 6.0;
+    num2 = 7.0;
     add(num1, num2);
     dif(num1, num2);
+    mult(num1, num2);
 }
-void add (int a, int b){
-    int sum;
+void add (float a, float b){
+    float sum;
     sum = a + b;
-    printf("The sum is %i",sum);
+    printf("The sum is %f",sum);
 }
-void sub (int a, int b){
-    int dif;
+void sub (float a, float b){
+    float dif;
     dif = a - b;
-    printf("The difference is %i", dif);
+    printf("The difference is %f", dif);
+}
+void mult(float a, float b){
+    float product;
+    product = a * b;
+    printf("The product is %f", product);
 }
