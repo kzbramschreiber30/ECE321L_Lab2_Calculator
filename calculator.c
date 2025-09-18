@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <float.h>
-void add(float a, float b);
-void sub(float a, float b);
-void mult(float a, float b);
-void div(float a, float b);
+void add(float a, float b); //additon directive
+void sub(float a, float b); //subtraction directive
+void mult(float a, float b); //multiplication directive
+void div(float a, float b); //division directive
 int main() {
     char op;
     float num1 = 0.0, num2 = 0.0;
@@ -13,19 +13,19 @@ int main() {
     //Prompt the user to enter two numbers
     printf("Enter two numbers: \n");
     scanf("%lf %lf", &num1, &num2);
-    if (op == '+'){
+    if (op == '+'){ //addition function
         add(num1, num2);
     }
-    else if (op == '-'){
+    else if (op == '-'){ //subtraction function
         sub(num1, num2);
     }
-    else if (op == '*'){
+    else if (op == '*'){ //multiplication function
         mult(num1, num2);
     }
-    else if (op == '/'){
+    else if (op == '/'){ //division function
         div(num1, num2);
     }
-    else {
+    else { //checking for invalid operator
         printf("Invalid Operator Entered! \n");
         return 1;
     }
