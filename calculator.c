@@ -6,13 +6,29 @@ void mult(float a, float b);
 void div(float a, float b);
 int main() {
     char op;
-    float num1, num2;
-    num1 = 6.0;
-    num2 = 7.0;
-    add(num1, num2);
-    dif(num1, num2);
-    mult(num1, num2);
-    div(num1, num2);
+    float num1 = 0.0, num2 = 0.0;
+     // Prompt the user to enter an operator
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &op); // Read the operator character
+    //Prompt the user to enter two numbers
+    printf("Enter two numbers: \n");
+    scanf("%lf %lf", &num1, &num2);
+    if (op == '+'){
+        add(num1, num2);
+    }
+    else if (op == '-'){
+        sub(num1, num2);
+    }
+    else if (op == '*'){
+        mult(num1, num2);
+    }
+    else if (op == '/'){
+        div(num1, num2);
+    }
+    else {
+        printf("Invalid Operator Entered! \n");
+        return 1;
+    }
 }
 void add (float a, float b){
     float sum;
